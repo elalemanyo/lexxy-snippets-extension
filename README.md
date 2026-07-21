@@ -1,4 +1,4 @@
-# lexxy-snippets-extension
+# Lexxy Snippets Extension
 
 [![CI](https://github.com/elalemanyo/lexxy-snippets-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/elalemanyo/lexxy-snippets-extension/actions/workflows/ci.yml)
 
