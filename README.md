@@ -1,5 +1,7 @@
 # lexxy-snippets-extension
 
+[![CI](https://github.com/elalemanyo/lexxy-snippets-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/elalemanyo/lexxy-snippets-extension/actions/workflows/ci.yml)
+
 Snippets toolbar extension for Lexxy editors.
 
 ## Installation
