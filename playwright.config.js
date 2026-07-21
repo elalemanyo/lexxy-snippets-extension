@@ -26,8 +26,8 @@ export default defineConfig({
     }
   ],
   webServer: {
-    command: 'npm run build:pages && python3 -m http.server 4173 --directory _site',
-    url: 'http://localhost:4173/index.html',
+    command: 'python3 -m http.server 4173',
+    url: 'http://localhost:4173/docs/index.html',
     reuseExistingServer: !process.env.CI
   }
 })
