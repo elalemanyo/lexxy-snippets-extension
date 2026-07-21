@@ -1,0 +1,52 @@
+{
+  "name": "lexxy-snippets-extension",
+  "version": "0.1.0",
+  "description": "Snippets toolbar extension for Lexxy editors.",
+  "type": "module",
+  "main": "./snippets_extension.js",
+  "types": "./snippets_extension.d.ts",
+  "exports": {
+    ".": {
+      "types": "./snippets_extension.d.ts",
+      "import": "./snippets_extension.js",
+      "default": "./snippets_extension.js"
+    }
+  },
+  "files": [
+    "snippets_extension.js",
+    "snippets_extension.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint snippets_extension.js",
+    "test": "playwright test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "lexxy",
+    "lexical",
+    "rails",
+    "editor",
+    "snippets"
+  ],
+  "license": "MIT",
+  "author": "ElAlemaño",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elalemanyo/lexxy-snippets-extension.git"
+  },
+  "bugs": "https://github.com/elalemanyo/lexxy-snippets-extension/issues",
+  "homepage": "https://github.com/elalemanyo/lexxy-snippets-extension#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@37signals/lexxy": ">=0.9.25 <1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "eslint": "^9.39.5",
+    "neostandard": "^0.13.0"
+  }
+}
