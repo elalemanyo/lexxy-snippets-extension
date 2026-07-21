@@ -12,11 +12,11 @@ async function loadWithSnippets (page, snippets) {
     observer.observe(document, { childList: true, subtree: true })
   }, typeof snippets === 'string' ? snippets : JSON.stringify(snippets))
 
-  await page.goto('/docs/index.html')
+  await page.goto('/index.html')
 }
 
 test('snippets dropdown shows items', async ({ page }) => {
-  await page.goto('/docs/index.html')
+  await page.goto('/index.html')
 
   const snippetsButton = page.locator('button[name="snippets"]')
   await expect(snippetsButton).toBeVisible()
@@ -29,7 +29,7 @@ test('snippets dropdown shows items', async ({ page }) => {
 })
 
 test('clicking a snippet inserts text', async ({ page }) => {
-  await page.goto('/docs/index.html')
+  await page.goto('/index.html')
 
   await page.locator('button[name="snippets"]').click()
   await page.getByRole('menuitem', { name: 'Greeting' }).click()
@@ -38,7 +38,7 @@ test('clicking a snippet inserts text', async ({ page }) => {
 })
 
 test('multiline plain text uses line breaks', async ({ page }) => {
-  await page.goto('/docs/index.html')
+  await page.goto('/index.html')
 
   await page.locator('button[name="snippets"]').click()
   await page.getByRole('menuitem', { name: 'Signature' }).click()
@@ -59,7 +59,7 @@ test('HTML snippets insert markup', async ({ page }) => {
 })
 
 test('a snippet replaces the selected text', async ({ page }) => {
-  await page.goto('/docs/index.html')
+  await page.goto('/index.html')
 
   const content = page.locator('.lexxy-editor__content')
   await content.click()

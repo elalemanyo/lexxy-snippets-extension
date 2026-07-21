@@ -18,6 +18,7 @@
     "README.md"
   ],
   "scripts": {
+    "build:pages": "node scripts/build_pages.js",
     "lint": "eslint snippets_extension.js",
     "test": "playwright test",
     "pack:check": "npm pack --dry-run"

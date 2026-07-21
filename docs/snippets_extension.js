@@ -1,1 +1,0 @@
-../snippets_extension.js
