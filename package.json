@@ -1,6 +1,6 @@
 {
   "name": "lexxy-snippets-extension",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Snippets toolbar extension for Lexxy editors.",
   "type": "module",
   "main": "./snippets_extension.js",

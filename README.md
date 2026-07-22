@@ -6,6 +6,29 @@ Snippets toolbar extension for Lexxy editors.
 
 ## Installation
 
+### Rails with importmap
+
+Lexxy's Rails gem already provides the editor and pins it as `lexxy`. Install only this extension from npm:
+
+```sh
+bin/importmap pin lexxy-snippets-extension
+```
+
+Then configure it alongside the gem-provided Lexxy module:
+
+```js
+import { configure } from "lexxy"
+import { SnippetsExtension } from "lexxy-snippets-extension"
+
+configure({
+  global: {
+    extensions: [SnippetsExtension]
+  }
+})
+```
+
+### npm
+
 ```sh
 npm install lexxy-snippets-extension
 ```

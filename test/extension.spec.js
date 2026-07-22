@@ -1,4 +1,11 @@
 import { test, expect } from '@playwright/test'
+import { readFile } from 'node:fs/promises'
+
+test('package entry point has no external imports', async () => {
+  const source = await readFile(new URL('../snippets_extension.js', import.meta.url), 'utf8')
+
+  expect(source).not.toMatch(/^import\s/m)
+})
 
 async function loadWithSnippets (page, snippets) {
   await page.addInitScript(raw => {

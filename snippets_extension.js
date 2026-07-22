@@ -1,12 +1,23 @@
-import { Extension } from '@37signals/lexxy'
-
 const triggerIcon = '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(0.75)"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></g></svg>'
 
-export class SnippetsExtension extends Extension {
+export class SnippetsExtension {
   #dropdownObserver
+  #editorElement
+
+  constructor (editorElement) {
+    this.#editorElement = editorElement
+  }
+
+  get editorElement () {
+    return this.#editorElement
+  }
 
   get enabled () {
     return this.editorElement.supportsRichText
+  }
+
+  get allowedElements () {
+    return []
   }
 
   initializeToolbar (toolbar) {
